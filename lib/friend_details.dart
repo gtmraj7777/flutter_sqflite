@@ -22,6 +22,7 @@ class _FriendDetailsState extends State<FriendDetails> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text("Details"),
         actions: [editButton(),deleteButton()],

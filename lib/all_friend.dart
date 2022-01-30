@@ -36,6 +36,7 @@ class _AllFriendState extends State<AllFriend> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text("Friends"),
          actions: [addButton()],
@@ -50,9 +51,10 @@ class _AllFriendState extends State<AllFriend> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => FriendDetails(friends[index])),);
 
               },
-            leading: Text("${friends[index].friendName}"),
-              title: Text("${friends[index].friendAddress}"),
+            leading: Image.asset('assets/images/user.jpg'),
+              title: Text("${friends[index].friendName}"),
               subtitle: Text("${friends[index].friendEmail}"),
+              trailing: Text("${friends[index].friendAddress}"),
               // trailing: RaisedButton(onPressed: () {
               //   Navigator.push(context, MaterialPageRoute(builder: (context) => EditFriend(friends[index])),);
               // },
